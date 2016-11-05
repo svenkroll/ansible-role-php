@@ -1,0 +1,37 @@
+---
+__php_packages:
+  - webtatic-release
+  - php56w-fpm
+  - php56w-cli
+  - php56w-common
+  - php56w-devel
+  - php56w-gd
+  - php56w-imap
+  - php56w-ldap
+  - php56w-mbstring
+  - php56w-opcache
+  - php56w-pdo
+  - php56w-pear
+  - php56w-pecl-apcu
+  - php56w-xml
+  - php56w-pecl-memcache
+  - php56w-xmlrpc
+  - php56w-curl
+  - php56w-soap
+  - php56w-mysql
+__php_webserver_daemon: "nginx"
+
+__php_conf_paths:
+  - /etc
+
+__php_extension_conf_paths:
+  - /etc/php.d
+
+__php_apc_conf_filename: 50-apc.ini
+__php_opcache_conf_filename: 10-opcache.ini
+__php_fpm_daemon: php-fpm
+__php_fpm_conf_path: "/etc/fpm"
+__php_fpm_pool_conf_path: "/etc/php-fpm.d/www.conf"
+
+__php_fpm_pool_user: nginx
+__php_fpm_pool_group: nginx

@@ -1,0 +1,13 @@
+---
+- name: Install webtatic repo.
+  yum:
+    name: "{{ webtatic_repo_url }}"
+    state: present
+  when: webtatic_repo_url
+
+- name: Ensure PHP packages are installed.
+  package:
+    name: "{{ item }}"
+    state: "{{ php_packages_state }}"
+  with_items: "{{ php_packages }}"
+  notify: restart webserver
